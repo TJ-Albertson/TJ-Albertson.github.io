@@ -35,8 +35,6 @@ h1, h2, h3 {
   color: #fff;
 }
 
-.header {
-}
 .header-title {
   display: inline-block;
   padding: .5rem 1.5rem;
@@ -82,7 +80,6 @@ hr {
 .theme:nth-child(even) {
   flex-basis: calc(100% / 4 - 2rem); /* Set width to 1/4 */
 }
-
 
 .theme h3 {
   margin-top: 1rem;
