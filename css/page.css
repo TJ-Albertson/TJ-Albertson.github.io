@@ -2,12 +2,15 @@
     display: flex;
 }
 
-.container {
+#text-container {
+    margin-right: 5%;
+    padding-right: 10%;
     margin-left: 0;
+    max-width: 50%;
 }
 
-#text-container {
-    width: 100%;
+#image-container {
+    margin-right: 0;
 }
 
 h1 {
@@ -19,7 +22,7 @@ h1 {
 
 .header-title {
     margin-top: 0;
-    margin-bottom: 2em;
+    margin-bottom: 1.5em;
 }
 
 p {
@@ -27,7 +30,6 @@ p {
 }
 
 #back-to-home {
-
     transition: border-color 0.3s ease;
     /* Smooth transition effect */
 }
@@ -36,4 +38,11 @@ p {
 #back-to-home:hover {
     border-color: white;
     /* Border color on hover */
+}
+
+@media (max-width: 1919px) {
+    #text-container {
+        margin-right: 3%;
+        padding-right: 0%;
+    }
 }

@@ -29,6 +29,28 @@
   <link rel="alternate" type="application/rss+xml" title="RSS" href="https://getpoole.com/atom.xml">
 
   <script src="https://kit.fontawesome.com/4cc35cc184.js" crossorigin="anonymous"></script>
+  
+  <script>
+    // Save scroll position
+    function saveScrollPosition() {
+      localStorage.setItem('homeScrollPosition', window.pageYOffset);
+    }
+
+    // Restore scroll position
+    function restoreScrollPosition() {
+      const savedScrollPosition = localStorage.getItem('homeScrollPosition');
+      if (savedScrollPosition) {
+        window.scrollTo(0, savedScrollPosition);
+        localStorage.removeItem('homeScrollPosition');
+      }
+    }
+
+    // Event listener to save scroll position on scroll
+    window.addEventListener('scroll', saveScrollPosition);
+
+    // Event listener to restore scroll position on page load
+    window.addEventListener('load', restoreScrollPosition);
+  </script>
 
 </head>
 
@@ -36,7 +58,7 @@
 <body>
 
   <div class="container">
-    
+
     <div class="header">
       <h1 class="header-title">TJ Albertson</h1>
       <p class="lead header-lead">
@@ -47,12 +69,13 @@
     <hr>
 
     <h2><i class="fa-solid fa-thumbtack"></i>&nbsp;&nbsp;&nbsp;Pinned Project</h2>
-    
+
     <img src="images/model_viewer.webp" alt="Image" width="640" height="360" margin="0">
     <h3>
       <a href="pages/model_viewer.html">3D Model Viewer</a>
     </h3>
-    <p id="pinned-text"> Right now it can load models and play animations. It uses the OpenGL spec for 3D rendering. I made my own importer FOR assimp to load the vertice, skeleton, and animation data. </p>
+    <p id="pinned-text"> Right now it can load models and play animations. It uses the OpenGL spec for 3D rendering. I
+      made my own importer FOR assimp to load the vertice, skeleton, and animation data. </p>
     <p>
       <a href="https://github.com/poole/poole" class="btn">Github</a>
     </p>
@@ -178,7 +201,7 @@
           <a href="https://tjalbertson.com/" class="btn" target="_blank">Site</a>
         </p>
         <p>
-          
+
         </p>
       </div>
 
@@ -187,7 +210,8 @@
     <hr>
 
     <h2>Tools and Enviroments</h2>
-    <p>I've compiled code with different compilers on Windows and Linux. Nowadays I primarily use Visual Studio but I'm gonna switch the compiler because everyone says Microsoft's compiler sucks.</p>
+    <p>I've compiled code with different compilers on Windows and Linux. Nowadays I primarily use Visual Studio but I'm
+      gonna switch the compiler because everyone says Microsoft's compiler sucks.</p>
     <div class="themes">
 
       <div class="theme">
@@ -218,49 +242,51 @@
     <h2>Resources</h2>
     <p>Some great learning and reference material I've found, a long with some opiniated characters.</p>
 
-      <div class="themes">
+    <div class="themes">
 
-        <div class="theme">
-          <img src="images/elements_of_computing.webp" alt="Image" width="256" height="192" margin="0">
-          <h3>The Elements of Computing Systems</h3>
-          <p>The best resource/course I've encounted. It taught me how computers work.</p>
-        </div>
-  
-        <div class="theme">
-          <img src="images/ben_eater.webp" alt="Image" width="256" height="192" margin="0">
-          <h3>Ben Eater
-          </h3>
-          <p>So many good computer hardware videos. His 6502 computer kit started my project. </p>
-        </div>
-
-        <div class="theme">
-          <img src="images/mike_acton.webp" alt="Image" width="256" height="192" margin="0">
-          <h3>Mike Acton
-          </h3>
-          <p>I love this talk. One day I will finish reading Intel and AMD x86 architechure manuals. Then will I be able to reason about the cost of solving the problem.</p>
-        </div>
-
-        <div class="theme">
-          <img src="images/lfs.webp" alt="Image" width="256" height="192" margin="0">
-          <h3>Linux from Scratch
-          </h3>
-          <p>I learned a lot about linux binaries from this but mostly about cross-compilation and program compilation in general.</p>
-        </div>
-
-        <div class="theme">
-          <img src="images/grant_searle.webp" alt="Image" width="256" height="192" margin="0">
-          <h3>Grant Searle
-          </h3>
-          <p>Assists me in my 6502 project and started my FPGA project.</p>
-        </div>
-
-        <div class="theme">
-          <img src="images/dive_systems.webp" alt="Image" width="256" height="192" margin="0">
-          <h3>Dive into Systems
-          </h3>
-          <p>I found this is a good reference for when I want a concise description of a computer concept.</p>
-        </div>
+      <div class="theme">
+        <img src="images/elements_of_computing.webp" alt="Image" width="256" height="192" margin="0">
+        <h3>The Elements of Computing Systems</h3>
+        <p>The best resource/course I've encounted. It taught me how computers work.</p>
       </div>
+
+      <div class="theme">
+        <img src="images/ben_eater.webp" alt="Image" width="256" height="192" margin="0">
+        <h3>Ben Eater
+        </h3>
+        <p>So many good computer hardware videos. His 6502 computer kit started my project. </p>
+      </div>
+
+      <div class="theme">
+        <img src="images/mike_acton.webp" alt="Image" width="256" height="192" margin="0">
+        <h3>Mike Acton
+        </h3>
+        <p>I love this talk. One day I will finish reading Intel and AMD x86 architechure manuals. Then will I be able
+          to reason about the cost of solving the problem.</p>
+      </div>
+
+      <div class="theme">
+        <img src="images/lfs.webp" alt="Image" width="256" height="192" margin="0">
+        <h3>Linux from Scratch
+        </h3>
+        <p>I learned a lot about linux binaries from this but mostly about cross-compilation and program compilation in
+          general.</p>
+      </div>
+
+      <div class="theme">
+        <img src="images/grant_searle.webp" alt="Image" width="256" height="192" margin="0">
+        <h3>Grant Searle
+        </h3>
+        <p>Assists me in my 6502 project and started my FPGA project.</p>
+      </div>
+
+      <div class="theme">
+        <img src="images/dive_systems.webp" alt="Image" width="256" height="192" margin="0">
+        <h3>Dive into Systems
+        </h3>
+        <p>I found this is a good reference for when I want a concise description of a computer concept.</p>
+      </div>
+    </div>
 
     <hr>
 
