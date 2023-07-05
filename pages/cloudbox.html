@@ -40,19 +40,20 @@
 
   <div class="page-container">
 
-    <div class="container" id="image-container">
-      <img src="../images/fpga.webp" alt="Image" width="640" height="480">
+    <div class="container" id="image-container" id="image-container">
+      <img src="../images/cloudbox.webp" alt="Image" width="640" height="480">
     </div>
 
     <div class="container" id="text-container">
       <div class="container">
-        <h1>FPGA Computer</h1>
-        <p>I had no idea what FPGA boards were until very recently. 
-          I was looking for software that would let me emulate computers (e.g. 6502) using a hardware defintion language. 
-          That's when I stumbled upon FPGA boards and found that the most commone use for HDL's is to synthesize (compile) it to run on FPGA's.
-           It then became apparent to me that this reprogrammable hardware is what hardware/circuit deisgners use to test their designs.</p>
-        <p>For this project I am working on recreating the Hack CPU on a FPGA board. It might seem as simple as re-writing the CPU, ROM, and RAM in VHDL or Verilog but that is not the case. The Hack CPU interacts with I/O via memory addresses but that part is abstracted from The Elements of Computing book. In reality you need to have hardware setup to interace with a keyboard and monitor. For this project I am trying have it work with a PS/2 keybaord and a simple black and white pixel composite video output.</p>
+        <h1>Cloudbox</h1>
+        <p>Social file sharing app built with React frontend, Node/Express.js backend, and MongoDB. The main page is a customizeable panel of boxes. Each box has all of the users files and can be shared with others. You can select which boxes you want to see, out of the ones that have been shared with you, on your main page.</p>
+        <p>The user can upload files and create folders in their box. The box also has a navigation bar at the top. The user can also customize their profile picture and description. The app uses Auth0 for authentication although initially I handled it myself by encrypting the password and storing it in MongoDB. </p>
+        <p>Unfortunately, this project was a little too ambitious and I only have a demo to show. Initially my plan was host this on one of my home servers and use it with my friends/family but I lost and interest and didn't think it was worth the effort.</p>
         <p>
+          <a href="https://github.com/TJ-Albertson/Cloudbox" class="btn" target="_blank">GitHub</a>
+          <a href="https://cloud-box-storage.com/" class="btn" target="_blank">Demo</a>
+        </p>  
       </div>
 
     <div class="container">
