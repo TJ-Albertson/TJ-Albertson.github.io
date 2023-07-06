@@ -47,9 +47,15 @@
     <div class="container" id="text-container">
       <div class="container">
         <h1>3D Model Viewer</h1>
-        <p>Learnopengl.com was a huge resource in helping me make this. Although I can safely say that I've touched, if not entirely rewritten, every line of code in this project. All of the code on Learnopengl.com is Object Oriented which I am not a fan of. </p>
-        <p>The guest article Skeletal Animation on learnopengl.com was also very helpful. I believe I was able to improve on the animation part, although I haven't tested it yet, by adding a item to the Node struct to store an important part of the transformation. In the article these transformations were stored in a map that was looked up for every transformation for every bone every frame.</p>
+        <p>This is a program written in C++ but mainly uses conventional plain C style code. No objects and I handle a lot of the memory allocation myself. It loads a model using the Asset Import Library and renders it with OpenGL calls.
+           The Assimp data is structured as a node tree to help maintain transformations throughout the model. The hardest part so far was understanding the data structure for animating the model.
+        </p>
+        <p>Learnopengl.com was a huge resource in helping me make this. Although I have touched, if not entirely rewritten, every line of code in this project. All of the code on Learnopengl.com is Object Oriented which I am not a fan of. </p>
+        <p>The guest article Skeletal Animation on learnopengl.com was also very helpful. I believe I was able to improve on the animation part, although I haven't quantifiably tested it yet, by adding a item to the Node struct to store an important part of the transformation. In the article these transformations were stored in a map that was looked up for every transformation for every bone every frame. Also I only copied the Skeleton part of the node tree as opposed to the whole thing.</p>
+        <p>What kind of bothers me about Assimp is that you still have to take into consideration the different file types. So in the future I would like to make an import for Collada files specifically, even though the specification is over 500 pages long. Since the Collada file spec is open source and it can hold data for pretty much anything you would want in a 3D model, it is probably what I would use in my video game. </p>
         <p>
+          <a href="https://github.com/TJ-Albertson/assimp_viewer" class="btn" target="_blank">Github</a>
+        </p>
       </div>
 
     <div class="container">
